@@ -13,12 +13,16 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/Alkenso/SwiftSpellbook.git", from: "0.3.1"),
+        .package(url: "https://github.com/Alkenso/SwiftSpellbook.git", from: "0.4.1"),
+        .package(url: "https://github.com/Alkenso/SwiftSpellbook_macOS.git", from: "0.0.2"),
     ],
     targets: [
         .target(
             name: "sHDIUtil",
-            dependencies: [.product(name: "SpellbookFoundation", package: "SwiftSpellbook")]
+            dependencies: [
+                .product(name: "Spellbook_macOS", package: "SwiftSpellbook_macOS"),
+                .product(name: "SpellbookFoundation", package: "SwiftSpellbook"),
+            ]
         ),
         .testTarget(
             name: "sHDIUtilTests",

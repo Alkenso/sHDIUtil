@@ -22,6 +22,7 @@
 
 import Foundation
 import SpellbookFoundation
+import Spellbook_macOS
 
 extension HDIUtil {
     public static let errorDomain = "HDIUtilErrorDomain"
